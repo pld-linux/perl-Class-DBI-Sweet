@@ -1,0 +1,64 @@
+#
+# Conditional build:
+%bcond_without	tests		# do not perform "make test"
+#
+%include	/usr/lib/rpm/macros.perl
+%define	pdir	Class
+%define	pnam	DBI-Sweet
+Summary:	Class::DBI::Sweet - Making sweet things sweeter
+#Summary(pl):	
+Name:		perl-Class-DBI-Sweet
+Version:	0.05
+Release:	1
+# same as perl
+License:	GPL v1+ or Artistic
+Group:		Development/Languages/Perl
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	501856c266f147e71804d3b5cfb5bc85
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{with tests}
+BuildRequires:	perl-Class-DBI >= 0.96
+BuildRequires:	perl-DBD-SQLite >= 1.08
+BuildRequires:	perl-Data-Page
+BuildRequires:	perl-Data-UUID
+BuildRequires:	perl-SQL-Abstract
+BuildRequires:	perl-Class-Accessor-Chained
+BuildRequires:	perl-Cache-Cache
+%endif
+BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%description
+Class::DBI::Sweet provides convenient count, search, page, and
+cache functions in a sweet package. It integrates these functions with
+Class::DBI in a convenient and efficient way.
+
+# %description -l pl
+# TODO
+
+%prep
+%setup -q -n %{pdir}-%{pnam}-%{version}
+
+%build
+%{__perl} Build.PL \
+	installdirs=vendor \
+	destdir=$RPM_BUILD_ROOT
+./Build
+
+%{?with_tests:./Build test}
+
+%install
+rm -rf $RPM_BUILD_ROOT
+
+./Build install
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc Changes README
+%{perl_vendorlib}/Class/DBI/*.pm
+%{perl_vendorlib}/Class/DBI/Sweet
+%{_mandir}/man3/*
