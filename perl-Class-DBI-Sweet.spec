@@ -6,7 +6,7 @@
 %define	pdir	Class
 %define	pnam	DBI-Sweet
 Summary:	Class::DBI::Sweet - Making sweet things sweeter
-#Summary(pl):	
+Summary(pl):	Class::DBI::Sweet - czynienie mi³ych rzeczy milszymi
 Name:		perl-Class-DBI-Sweet
 Version:	0.05
 Release:	1
@@ -18,24 +18,26 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl-Cache-Cache
+BuildRequires:	perl-Class-Accessor-Chained
 BuildRequires:	perl-Class-DBI >= 0.96
 BuildRequires:	perl-DBD-SQLite >= 1.08
 BuildRequires:	perl-Data-Page
 BuildRequires:	perl-Data-UUID
 BuildRequires:	perl-SQL-Abstract
-BuildRequires:	perl-Class-Accessor-Chained
-BuildRequires:	perl-Cache-Cache
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Class::DBI::Sweet provides convenient count, search, page, and
-cache functions in a sweet package. It integrates these functions with
+Class::DBI::Sweet provides convenient count, search, page, and cache
+functions in a sweet package. It integrates these functions with
 Class::DBI in a convenient and efficient way.
 
-# %description -l pl
-# TODO
+%description -l pl
+Class::DBI::Sweet dostarcza wygodne funkcje count, search, page i
+chage w mi³ym pakiecie. Integruje te funkcje z Class::DBI w wygodny i
+wydajny sposób.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
