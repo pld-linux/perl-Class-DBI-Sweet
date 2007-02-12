@@ -6,7 +6,7 @@
 %define	pdir	Class
 %define	pnam	DBI-Sweet
 Summary:	Class::DBI::Sweet - Making sweet things sweeter
-Summary(pl):	Class::DBI::Sweet - czynienie mi≥ych rzeczy milszymi
+Summary(pl.UTF-8):   Class::DBI::Sweet - czynienie mi≈Çych rzeczy milszymi
 Name:		perl-Class-DBI-Sweet
 Version:	0.05
 Release:	1
@@ -34,10 +34,10 @@ Class::DBI::Sweet provides convenient count, search, page, and cache
 functions in a sweet package. It integrates these functions with
 Class::DBI in a convenient and efficient way.
 
-%description -l pl
+%description -l pl.UTF-8
 Class::DBI::Sweet dostarcza wygodne funkcje count, search, page i
-chage w mi≥ym pakiecie. Integruje te funkcje z Class::DBI w wygodny i
-wydajny sposÛb.
+chage w mi≈Çym pakiecie. Integruje te funkcje z Class::DBI w wygodny i
+wydajny spos√≥b.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
