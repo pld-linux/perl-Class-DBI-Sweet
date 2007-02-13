@@ -6,7 +6,7 @@
 %define	pdir	Class
 %define	pnam	DBI-Sweet
 Summary:	Class::DBI::Sweet - Making sweet things sweeter
-Summary(pl.UTF-8):   Class::DBI::Sweet - czynienie miłych rzeczy milszymi
+Summary(pl.UTF-8):	Class::DBI::Sweet - czynienie miłych rzeczy milszymi
 Name:		perl-Class-DBI-Sweet
 Version:	0.05
 Release:	1
