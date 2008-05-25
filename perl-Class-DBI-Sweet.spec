@@ -8,13 +8,13 @@
 Summary:	Class::DBI::Sweet - Making sweet things sweeter
 Summary(pl.UTF-8):	Class::DBI::Sweet - czynienie miłych rzeczy milszymi
 Name:		perl-Class-DBI-Sweet
-Version:	0.08
+Version:	0.09
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Class/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7bdb32183faaff635e1c68f4e3c0396a
+# Source0-md5:	6e65b411625ab6b4e1028ce0c684e2a7
 URL:		http://search.cpan.org/dist/Class-DBI-Sweet/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
