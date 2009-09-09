@@ -8,25 +8,28 @@
 Summary:	Class::DBI::Sweet - Making sweet things sweeter
 Summary(pl.UTF-8):	Class::DBI::Sweet - czynienie miłych rzeczy milszymi
 Name:		perl-Class-DBI-Sweet
-Version:	0.09
+Version:	0.10
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Class/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	6e65b411625ab6b4e1028ce0c684e2a7
+# Source0-md5:	7e6f58a0e72ad65c14feda08e0d9d5bf
 URL:		http://search.cpan.org/dist/Class-DBI-Sweet/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl(Class::DBI) >= 3.0.12
+BuildRequires:	perl(DBD::Pg)
+BuildRequires:	perl(DBD::SQLite) >= 1.08
+BuildRequires:	perl(Data::Page)
+BuildRequires:	perl(Data::UUID)
+BuildRequires:	perl(Date::Simple)
+BuildRequires:	perl(SQL::Abstract) >= 1.55
+BuildRequires:	perl(Time::Piece::MySQL)
 BuildRequires:	perl-Cache-Cache
-BuildRequires:	perl-Class-Accessor-Chained
-BuildRequires:	perl-Class-DBI >= 0.96
-BuildRequires:	perl-DBD-SQLite >= 1.08
-BuildRequires:	perl-Data-Page
-BuildRequires:	perl-Data-UUID
-BuildRequires:	perl-SQL-Abstract
+BuildRequires:	perl-DBI
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
