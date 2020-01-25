@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
 %define	pnam	DBI-Sweet
 Summary:	Class::DBI::Sweet - Making sweet things sweeter
