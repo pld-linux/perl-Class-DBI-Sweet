@@ -8,7 +8,7 @@ Summary:	Class::DBI::Sweet - Making sweet things sweeter
 Summary(pl.UTF-8):	Class::DBI::Sweet - czynienie miłych rzeczy milszymi
 Name:		perl-Class-DBI-Sweet
 Version:	0.11
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
